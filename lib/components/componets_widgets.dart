@@ -43,7 +43,7 @@ final  TextInputType? keyboardType;
             horizontal: 42,
             vertical: 20,
           ),
-          fillColor: Colors.white24,
+          fillColor: Colors.grey.shade100,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
             borderSide: BorderSide.none,
@@ -61,8 +61,9 @@ class ProfileButton extends StatelessWidget {
   String? type;
   String? name2;
   String? type2;
+ void Function()? onPressed;
 
-  ProfileButton({this.icon, this.name, this.type ,this.name2,this.type2});
+  ProfileButton({this.icon, this.name, this.type ,this.name2,this.type2 ,this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +173,7 @@ class ProfileButton extends StatelessWidget {
               ),
             ],
           ),
-          onPressed: () {},
+          onPressed: onPressed,
         ),
       ),
     );
